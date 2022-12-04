@@ -23,7 +23,7 @@ async function getPercent() {
 		const { data } = await curly.get(
 			"https://www.fortnitechapter4.com/api/event.json",
 			{
-				SSL_VERIFYPEER: 0, // hacky
+				SSL_VERIFYPEER: 0,
 				httpHeader: [
 					"User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:107.0) Gecko/20100101 Firefox/107.0",
 				],
@@ -42,7 +42,11 @@ async function getPercent() {
 				.addFields({
 					name: "<:euphoria:910624917396021258>  Percentage:",
 					value: `${progress}`,
-				});
+				})
+				.setAuthor(
+            "normie#1359",
+            "https://cdn.discordapp.com/avatars/722930349276921888/cdce37c3447bbc3dfe4bcbd7cc486536.png"
+          );
 
 			client.channels.cache.get(config.channel).send({ embeds: [embed] });
 		} else {
