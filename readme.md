@@ -4,11 +4,11 @@ _before you say anything, shut up._
 
 ## What is fortniter?
 
-Fortniter is a Discord bot that uses node-libcurl to get the current progress of the wait time for [chapter 4 in Fortnite](https://www.fortnitechapter4.com/). It then posts the progress to a Discord channel.
+Fortniter is a Discord bot that uses node-libcurl to get the current progress of the wait time for [Chapter 4 in Fortnite](https://www.fortnitechapter4.com/). It then posts the progress to a Discord channel.
 
 ## How?
 
-We send a request using [node-libcurl](https://npmjs.org/package/node-libcurl) to `https://www.fortnitechapter4.com/api/event.json` with the User-Agent set to `Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:107.0) Gecko/20100101 Firefox/107.0`. The setting of User-Agent and the reason that node-libcurl is used is to bypass Cloudflare. After, we post it to Discord using [Discord.js](https://discord.js.org). _(holy crap this paragraph was written by [lem6ns](https://github.com/lem6ns))_
+We send a request using [node-libcurl](https://npmjs.org/package/node-libcurl) to `https://www.fortnitechapter4.com/api/event.json` with the User-Agent set to `Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:107.0) Gecko/20100101 Firefox/107.0`. For some reason, Cloudflare blocks Fetch and Axios requests, but still allows curl. After the percent is obtained, it is then posted in an embed to Discord using [Discord.js](https://discord.js.org). _(holy crap this paragraph was written by [lem6ns](https://github.com/lem6ns) and normie because lemons needs to work on his grammar)_
 
 ## Well, how can I use it, even though it's going to be obsolete in less than 24 hours?
 
