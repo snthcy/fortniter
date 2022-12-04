@@ -4,11 +4,11 @@ _before you say anything, shut up._
 
 ## What is fortniter?
 
-Fortniter is a Discord bot that spins up a Puppeteer instance to get the current progress of the wait time for [chapter 4 in Fortnite](https://www.fortnitechapter4.com/). It then posts the progress to a Discord channel.
+Fortniter is a Discord bot that uses node-libcurl to get the current progress of the wait time for [chapter 4 in Fortnite](https://www.fortnitechapter4.com/). It then posts the progress to a Discord channel.
 
 ## How?
 
-Because the percentage is not accessable via an API _(there's one api link but, y'know... like, Cloudflare was a jerk.)_, we have to scrape the page. This is done by spinning up a [Puppeteer](https://pptr.dev/) instance and navigating to the page. Once the page is loaded, we can grab the progress bar and post it to Discord using [Discord.js](https://discord.js.org). _(holy crap this paragraph was written by Copilot)_
+We send a request using [node-libcurl](https://npmjs.org/package/node-libcurl) to `https://www.fortnitechapter4.com/api/event.json` with the User-Agent set to `Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:107.0) Gecko/20100101 Firefox/107.0`. The setting of User-Agent and the reason that node-libcurl is used is to bypass Cloudflare. After, we post it to Discord using [Discord.js](https://discord.js.org). _(holy crap this paragraph was written by [lem6ns](https://github.com/lem6ns))_
 
 ## Well, how can I use it, even though it's going to be obsolete in less than 24 hours?
 
