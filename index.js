@@ -55,7 +55,7 @@ function fortniter() {
             value: `${percent}`,
           });
 
-        client.channels.cache.get("1048739296791756882").send({ embeds: [embed] });
+        client.channels.cache.get(config.channel).send({ embeds: [embed] });
 
         // close the instance to make way for a new one
         browser.close();
